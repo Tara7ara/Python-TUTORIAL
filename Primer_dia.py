@@ -32,7 +32,30 @@ height = 7.26 #altura
 
 perimeter = width * 2 + height * 2
 area = width * height
-diagonal = (width ** 2) + (height ** 2) ** (1 / 2)
+diagonal = ((width ** 2) + (height ** 2)) ** (1 / 2)
 
 print("Perimetro:", perimeter,"\nArea:", area, "\nDiagonal:", diagonal)
 
+#Ejercicio de interes anual
+
+amountFinal = 1000
+annualInterest = 4.25 * 0.01
+monthInterest = annualInterest / 12 
+totaMonth = 12 * 5
+amountInitial = amountFinal / ((1 + monthInterest) ** totaMonth)
+print ("The initial deposit is: ", amountInitial) 
+#vf = (v1 * (1 + im) ** m)
+
+#Ejemplos
+precio = 2
+print("Cuesta:", precio) #--> string K
+print(f"Cuesta: {precio}") #--> string f
+
+#Cosas de clases
+name = 'John'
+age = 18
+height = 1.78
+city = 'Barcelona'
+studiant = list([name, age, city, height])
+print(studiant)
+print(studiant[2:5])
