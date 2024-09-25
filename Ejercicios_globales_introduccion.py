@@ -14,12 +14,20 @@ m = 24.5
 a = 4.5
 N = 150
 F = N * m * g + m * a
-print (F)
-#3
+print ("Friction = ", F)
 
+#3
+x1 = 4.5
+y1 = -5.5
+x2 = 6.6
+y2 = -6.5
+point = (y2 -y1) / (x2 -x1)
+print ("The conexion in this 2 lines = ", point)
 
 #4
-
+write = "123456789" 
+reverseWrite = write [::-1]
+print(write, "=/= ", reverseWrite)
 
 
 #TUPLAS
