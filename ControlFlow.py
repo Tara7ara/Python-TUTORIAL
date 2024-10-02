@@ -1,5 +1,4 @@
 #Ejercicio 1
-'''
 # Inputs for password and verification code
 password =  '@enti.cat'
 verification_code ='52'  ## write some value here to test your code
@@ -22,7 +21,6 @@ if password == correct_password:
         print("Code incorrecte")
 else:
     print("Password incorrecto")
-'''
 '''
 if password == correct_password and verification_code == correct_code:
     print("Password and code is correct!")

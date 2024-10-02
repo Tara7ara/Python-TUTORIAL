@@ -17,7 +17,7 @@ ip_log = [
     "192.168.1.17", "10.0.0.37", "192.168.0.18", "10.0.0.38", "172.16.0.18", "192.168.1.18", 
     "10.0.0.39", "192.168.0.19", "10.0.0.40", "172.16.0.19", "192.168.1.19", "10.0.0.41"
 ]
-'''
+
 # Write the code here
 suspiciousIP = "203.0.113.5"
 
@@ -36,12 +36,11 @@ for logged_IPs in ip_log:
         break
 if Logged == False:
     print("suspiciusIP did not log in")
-'''
 
 #Ejercicio 2
 
 # Password to check
-password = 'B49Dh2qyRwXnn8e75Z4SAd'
+password = 'B49Dh2qyRwXnn!8e75Z4SAd'
 
 # Initializing flags for each condition
 uppercase = False
@@ -50,7 +49,7 @@ digitcase = False
 specialcase = False
 
 # List of special characters
-special_characters = "!@#$%^&*()"
+special_characters = ["!","@","#","$","%","^","&","*","(",")"]
 
 # Check the length of the password
 if len(password) >= 8:
