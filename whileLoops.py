@@ -69,23 +69,8 @@ traffic_log = [
 # Keywords considered suspicious
 suspicious_keywords = ["attack", "malware", "phishing"]
 
-'''
 #> mayor que
-bucleIP = 0
-for bucleIP in traffic_log:
-    packets = bucleIP["packets"]
-    attemps = traffic_log[bucleIP].get("ip")
-    if attemps in blocklist:
-        print("IP", attemps, "BLOQUED (IP BLOQUED)")
-    else:
-        for packet in packets:
-            for keyword in suspicious_keywords:
-                if keyword in packet:
-                    print("IP", attemps, "BLOQUED (IP SUSPICIUS)")
-                else:
-                     print("IP", attemps, "CORRECT")
-    bucleIP +=1
-'''
+
 #Revisar la palabra --> si lo tiene marcar como sospechosa
 #Imprimir todo mientras pasa el control 
 
@@ -106,7 +91,46 @@ for bucle in traffic_log: #Entro en el bucle siempre que se cumpla "bucle" este 
             if ip_investigated == True: #Si ya es true, sale del bucle 
                 break
         if ip_investigated == False:
-            print("IP:",ip, "= Permited")
+            print("IP:",ip, "= Save")
 
     contador += 1
 print("Total ip revised", contador)
+
+
+
+
+
+#Ejercicio extra por mi
+
+#List of 100 logged IP addresses (simulating a log file)
+ip_log = [
+    "192.168.0.1", "10.0.0.5", "192.168.0.2", "10.0.0.6", "192.168.1.1", 
+    "172.16.0.1", "10.0.0.7", "192.168.1.2", "172.16.0.2", "192.168.0.3", "10.0.0.8", 
+    "172.16.0.3", "192.168.1.3", "10.0.0.9", "203.0.113.6", "192.168.0.4", "10.0.0.10", 
+    "172.16.0.4", "192.168.1.4", "10.0.0.11", "192.168.0.5", "10.0.0.12", "172.16.0.5", 
+    "192.168.1.5", "10.0.0.13", "192.168.0.6", "10.0.0.14", "172.16.0.6", "192.168.1.6", 
+    "10.0.0.15", "192.168.0.7", "10.0.0.16", "172.16.0.7", "192.168.1.7", "10.0.0.17", 
+    "192.168.0.8", "10.0.0.18", "172.16.0.8", "192.168.1.8", "10.0.0.19", "192.168.0.9", 
+    "10.0.0.20", "172.16.0.9", "192.168.1.9", "10.0.0.21", "192.168.0.10", "10.0.0.22", 
+    "172.16.0.10", "192.168.1.10", "10.0.0.23", "192.168.0.11", "10.0.0.24", "172.16.0.11", 
+    "192.168.1.11", "10.0.0.25", "192.168.0.12", "10.0.0.26", "172.16.0.12", "192.168.1.12", 
+    "10.0.0.27", "192.168.0.13", "10.0.0.28", "172.16.0.13", "192.168.1.13", "10.0.0.29", 
+    "192.168.0.14", "10.0.0.30", "172.16.0.14", "192.168.1.14", "10.0.0.31", "192.168.0.15", 
+    "10.0.0.32", "172.16.0.15", "192.168.1.15", "10.0.0.33", "192.168.0.16", "10.0.0.34", 
+    "172.16.0.16", "192.168.1.16", "10.0.0.35", "192.168.0.17", "10.0.0.36", "172.16.0.17", 
+    "192.168.1.17", "10.0.0.37", "192.168.0.18", "10.0.0.38", "172.16.0.18", "192.168.1.18", 
+    "10.0.0.39", "192.168.0.19", "10.0.0.40", "172.16.0.19", "192.168.1.19", "10.0.0.41"
+]
+
+suspiciousIP = "203.0.113.5"
+suspiciousIPs = False
+bucleIpLog = 0
+print("EJERCICIO RARO")
+while bucleIpLog != len(ip_log):
+    if ip_log[bucleIpLog] == suspiciousIP:
+        print("The suspicius IP(",suspiciousIP,") is here")
+        suspiciousIPs = True
+        break
+    bucleIpLog += 1
+if suspiciousIPs == False:
+    print("All ip is OK")

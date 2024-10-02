@@ -20,13 +20,15 @@ ip_log = [
 
 # Write the code here
 suspiciousIP = "203.0.113.5"
-
+suspiciousIPs = False
 for x in ip_log:
     if x == suspiciousIP:
         print("The suspicius IP is here")
+        suspiciousIPs = True
         break
-    else:
+    elif suspiciousIPs == False:
         print("The suspicius IP is not here")
+
 # Manera del profesor
 Logged = False
 for logged_IPs in ip_log:
@@ -39,19 +41,19 @@ if Logged == False:
 
 #Ejercicio 2
 
-# Password to check
-password = 'B49Dh2qyRwXnn!8e75Z4SAd'
+#Password to check
+password = 'B49Dh2qyRwXnn!8e75Z4SAd!'
 
-# Initializing flags for each condition
+#Initializing flags for each condition
 uppercase = False
 lowercase = False
 digitcase = False
 specialcase = False
 
-# List of special characters
+#List of special characters
 special_characters = ["!","@","#","$","%","^","&","*","(",")"]
 
-# Check the length of the password
+#Check the length of the password
 if len(password) >= 8:
     for secur in password:
         if secur.isupper():
@@ -63,7 +65,7 @@ if len(password) >= 8:
         elif secur in special_characters:
             specialcase = True
 
-    if uppercase and lowercase and digitcase and specialcase:
+    if uppercase and lowercase and digitcase and specialcase == True:
         print("The password is strong.")
     else:
         print("The password does not meet the security requirements.")
