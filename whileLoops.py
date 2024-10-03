@@ -1,4 +1,3 @@
-'''
 # Correct password (hardcoded for this exercise)
 correct_password = "secure123"
 
@@ -23,7 +22,7 @@ login_attempts = [0, 0, 1, 1, 0, 0, 0, 0, 1]
 
 maxintentos = 0
 contadorlista = 0
-\''' COSA DEL PROFE
+''' COSA DEL PROFE
 while contadorlista < len(login_attempts):
     attemps = login_attempts[contadorlista]
     if attemps == 0:
@@ -38,7 +37,7 @@ while contadorlista < len(login_attempts):
         break
 
     contadorlista +=1
-\'''
+'''
 while contadorlista != len(login_attempts):
     intentos = login_attempts[contadorlista] #es para leer el numero de la lista
     if intentos == 0:
@@ -52,7 +51,7 @@ while contadorlista != len(login_attempts):
             break
 
     contadorlista+=1
-'''
+
 # Simulated blocklist of malicious IP addresses
 blocklist = ["192.168.1.100", "10.0.0.5", "203.0.113.50", "172.16.0.2"]
 
@@ -96,15 +95,10 @@ for bucle in traffic_log: #Entro en el bucle siempre que se cumpla "bucle" este 
     contador += 1
 print("Total ip revised", contador)
 
-
-
-
-
 #Ejercicio extra por mi
-
 #List of 100 logged IP addresses (simulating a log file)
 ip_log = [
-    "192.168.0.1", "10.0.0.5", "192.168.0.2", "10.0.0.6", "192.168.1.1", 
+    "192.168.0.1", "10.0.0.5", "192.168.0.2", "10.0.0.6", "203.0.113.5", "192.168.1.1", 
     "172.16.0.1", "10.0.0.7", "192.168.1.2", "172.16.0.2", "192.168.0.3", "10.0.0.8", 
     "172.16.0.3", "192.168.1.3", "10.0.0.9", "203.0.113.6", "192.168.0.4", "10.0.0.10", 
     "172.16.0.4", "192.168.1.4", "10.0.0.11", "192.168.0.5", "10.0.0.12", "172.16.0.5", 

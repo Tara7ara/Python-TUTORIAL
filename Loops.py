@@ -20,15 +20,13 @@ ip_log = [
 
 # Write the code here
 suspiciousIP = "203.0.113.5"
-suspiciousIPs = False
+
 for x in ip_log:
     if x == suspiciousIP:
         print("The suspicius IP is here")
-        suspiciousIPs = True
         break
-    elif suspiciousIPs == False:
+    else:
         print("The suspicius IP is not here")
-
 # Manera del profesor
 Logged = False
 for logged_IPs in ip_log:
