@@ -22,22 +22,6 @@ login_attempts = [0, 0, 1, 1, 0, 0, 0, 0, 1]
 
 maxintentos = 0
 contadorlista = 0
-''' COSA DEL PROFE
-while contadorlista < len(login_attempts):
-    attemps = login_attempts[contadorlista]
-    if attemps == 0:
-        maxintentos +=1
-        print("Failed")
-    else:
-        maxintentos = 0
-        print("Acces")
-
-    if maxintentos == 3:
-        print("To many intents")
-        break
-
-    contadorlista +=1
-'''
 while contadorlista != len(login_attempts):
     intentos = login_attempts[contadorlista] #es para leer el numero de la lista
     if intentos == 0:
