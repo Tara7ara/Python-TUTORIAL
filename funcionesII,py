@@ -1,0 +1,35 @@
+ip_list = ["192.168.1.10", "192.168.1.5", "192.168.1.25"]
+suspicious_ips = ["192.168.1.5", "192.168.1.25"]
+
+def find_suspicious_ips(ip_list, suspicious_ips, index = 0):
+    if index>len(suspicious_ips):
+        exit
+    elif ip_list[index] in suspicious_ips[index]:
+        print(suspicious_ips[index])
+    return find_suspicious_ips(ip_list, suspicious_ips, index+1)
+
+logs=["patata", "pataton", "Estocolmo", "Desfribrilador", "haljshdlñjakshdlajhsdlkjashdlkjas"]
+def find_max_in_logs(logs, index=0):
+
+    if len(logs[index]) == max(logs):
+        return (" The longest log entry is: ", logs[index])
+    else:
+        print("Rhis is not the longest log entry!")
+    print(find_max_in_logs(logs, 0))
+
+
+    max_log =""
+    if index >= len(logs):
+        return max_log
+        
+    elif len(logs[index]) > len(max_log):
+        max_log =logs[index]
+        return find_max_in_logs(logs, index+1)
+
+print(find_max_in_logs(logs))
+
+
+check_number = lambda x: "Positive" if x > 0 else ("Negative" if x < 0 else "Zero")
+print(check_number(10))
+print(check_number(-5))
+print(check_number(0))
